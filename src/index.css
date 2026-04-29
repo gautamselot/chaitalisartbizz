@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #1e1b4b;
+  --color-secondary: #f472b6;
+  --color-surface: #fafafa;
+  --color-accent-amber: #fb7185;
+  --color-teal-950: #fef2f2;
+  --color-teal-900: #fee2e2;
+  --color-on-surface-variant: #701a75;
+  --color-surface-container: #ffffff;
+
+  /* Futuristic Palette Additions */
+  --color-neon-pink: #f472b6;
+  --color-neon-rose: #fb7185;
+  --color-deep-space: #fafafa;
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-primary font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif text-primary;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.glass-dark {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.neon-border {
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.15);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
+.neon-text {
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.3);
+}
+
+.magnetic-button {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.magnetic-button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.resin-glow {
+  box-shadow: 0 10px 40px -10px rgba(4, 25, 32, 0.15);
+}
+
+.fluid-mask {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M913.5,612Q827,724,737.5,821Q648,918,527.5,892.5Q407,867,314,807Q221,747,159,641Q97,535,110.5,414Q124,293,212.5,199Q301,105,431,92Q561,79,663.5,160.5Q766,242,883,371Q1000,500,913.5,612Z' fill='%23000'%3E%3C/path%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
