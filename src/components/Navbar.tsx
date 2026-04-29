@@ -21,9 +21,9 @@ export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
           className="flex items-center gap-4 cursor-pointer group"
           onClick={() => onNavigate("home")}
         >
-          <div className="text-4xl md:text-6xl font-serif font-black tracking-tighter text-primary italic flex flex-col leading-none">
-            <span className="text-secondary neon-text">Chaitali's</span>
-            <span className="text-[12px] tracking-[0.8em] uppercase font-sans font-bold -mt-2 opacity-60 group-hover:opacity-100 transition-opacity">Artbizz</span>
+          <div className="flex flex-row items-baseline gap-3 group">
+            <span className="text-3xl md:text-5xl font-serif font-black tracking-tighter text-secondary italic neon-text leading-none">Chaitali's</span>
+            <span className="text-[10px] md:text-[12px] tracking-[0.6em] uppercase font-sans font-bold opacity-60 group-hover:opacity-100 transition-opacity text-primary">Artbizz</span>
           </div>
         </div>
 
